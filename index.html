@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Giriş</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #fafafa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .login-box {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+        }
+
+        .login-box h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #262626;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #3897f0;
+            border: none;
+            border-radius: 3px;
+            color: white;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #2a6cb6;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="login-box">
+        <h2>Instagram</h2>
+        <form onsubmit="return login()">
+            <input type="text" id="username" placeholder="Kullanıcı Adı" required>
+            <input type="password" id="password" placeholder="Şifre" required>
+            <button type="submit">Giriş Yap</button>
+        </form>
+    </div>
+
+    <script>
+        function login() {
+            // Kullanıcı adı ve şifreyi alıyoruz
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+
+            // Herhangi bir kullanıcı adı ve şifreyi kabul ediyoruz
+            // Giriş başarılı sayılacak ve başarı sayfasına yönlendireceğiz
+            window.location.href = "success.html"; 
+            return false; // Formun gönderilmesini engelle
+        }
+    </script>
+
+</body>
+</html>
